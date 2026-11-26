@@ -753,3 +753,19 @@ a.card:focus-visible {
     scroll-behavior: auto;
   }
 }
+
+/* Square logos: fill more of the tile so they read the same size as wide logos */
+.card-logo img.logo-square {
+  max-height: 5.25rem;
+}
+.card-logo:has(img.logo-square) {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.footer-logo-tile img.logo-square {
+  max-height: 38px;
+}
+.footer-logo-tile:has(img.logo-square) {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
