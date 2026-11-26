@@ -790,3 +790,28 @@ a.card:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Focus grid with five areas */
+.focus-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 900px) {
+  .focus-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .focus-item:nth-child(3),
+  .focus-item:nth-child(4) {
+    border-bottom: 1px solid var(--line);
+  }
+  .focus-item:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 700px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+  .focus-item:nth-child(5) {
+    grid-column: auto;
+  }
+}
