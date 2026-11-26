@@ -815,3 +815,152 @@ a.card:focus-visible {
     grid-column: auto;
   }
 }
+
+/* Interior pages */
+
+.page-hero {
+  padding: clamp(2.5rem, 7vh, 4.5rem) 0 clamp(2.25rem, 6vh, 3.75rem);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+}
+
+.page-lede {
+  margin-top: 1.15rem;
+  max-width: 36em;
+  color: var(--ink-muted);
+  font-size: 1.0625rem;
+}
+
+.page-prose {
+  max-width: 42rem;
+}
+
+.page-prose p {
+  margin-top: 1.1rem;
+  color: var(--ink-muted);
+  font-size: 1.0625rem;
+}
+
+.page-prose .section-title {
+  margin-bottom: 0.25rem;
+}
+
+.text-link {
+  color: var(--gold-text);
+  border-bottom: 1px solid rgba(198, 163, 106, 0.45);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+}
+
+.nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+/* Sell form */
+
+.form-wrap {
+  max-width: 44rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.form-optional {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+
+.sell-form input,
+.sell-form select,
+.sell-form textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem 0.85rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: -0.011em;
+  color-scheme: dark;
+}
+
+.sell-form textarea {
+  min-height: 8.5rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.sell-form input:focus,
+.sell-form select:focus,
+.sell-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.sell-form.is-validated input:invalid,
+.sell-form.is-validated select:invalid,
+.sell-form.is-validated textarea:invalid {
+  border-color: #c47a6a;
+}
+
+.form-note {
+  margin-top: 1.25rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  max-width: 40em;
+}
+
+.form-error {
+  margin-top: 0.75rem;
+  color: #e0a090;
+  font-size: 0.92rem;
+}
+
+.form-actions {
+  margin-top: 1.35rem;
+}
+
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Ryse 21</title>
+  <meta name="description" content="Ryse 21 is a holding company that acquires and operates small, cash-flowing businesses for the long term. Learn how we work with sellers and how we operate after closing.">
+  <link rel="canonical" href="https://ryse21.com/about.html">
+  <meta property="og:title" content="About — Ryse 21">
+  <meta property="og:description" content="Ryse 21 is a holding company that acquires and operates small, cash-flowing businesses for the long term. Learn how we work with sellers and how we operate after closing.">
+  <meta property="og:url" content="https://ryse21.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ryse 21">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About — Ryse 21">
+  <meta name="twitter:description" content="Ryse 21 is a holding company that acquires and operates small, cash-flowing businesses for the long term. Learn how we work with sellers and how we operate after closing.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Ryse 21 home">
+        <svg class="brand-mark" viewBox="0 0 146 146" aria-hidden="true">
+          <path d="M 146.00 73.00 A 73.00 73.00 0 1 0 0.00 73.00 A 73.00 73.00 0 1 0 146.00 73.00 Z M 136.00 73.00 A 63.00 63.00 0 1 1 10.00 73.00 A 63.00 63.00 0 1 1 136.00 73.00 Z" fill="#c6a36a" fill-rule="evenodd"/>
+          <path d="M 44.00 35.00 H 79.00 A 23 23 0 0 1 79.00 81.00 H 58.00 V 111.00 H 44.00 Z M 58.00 48.00 V 68.00 H 78.00 A 10 10 0 0 0 78.00 48.00 Z" fill="#f3f1ec" fill-rule="evenodd"/>
+          <path d="M 69.00 86.00 H 85.00 L 102.00 111.00 H 85.00 Z" fill="#c6a36a"/>
+        </svg>
+        Ryse 21
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="about.html" aria-current="page">About</a>
+        <a href="index.html#criteria">Criteria</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#focus">Focus</a>
+        <a class="nav-cta" href="sell.html">Sell</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="wrap">
+        <p class="hero-kicker">About</p>
+        <h1 class="page-title">About Ryse 21.</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap about-grid">
+        <div>
+          <p class="section-label">Who we are</p>
+          <h2 class="section-title">A holding company built to buy, hold, and operate.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Ryse 21 is a holding company that acquires and operates small, cash-flowing businesses for the long term. We buy companies we can run remotely and intend to hold, staying close to the work after we close.
+          </p>
+          <p>
+            We look for operations with a purchase price under $2 million, fewer than five employees, at least 24 months of consistent cash flow, and a model that can be managed off-site. Our portfolio includes businesses in equipment rental, telemetry, industrial repair services, vending and equipment leasing, retail research chemicals, and treasury management.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-logos" aria-label="Our portfolio companies">
+        <span class="footer-logo-tile"><img src="logos/agility-rentals.png" alt="Agility Rentals" width="350" height="83"></span>
+        <span class="footer-logo-tile"><img src="logos/ryse-solutions.png" alt="Ryse Solutions Inc" width="480" height="138"></span>
+        <span class="footer-logo-tile"><img src="logos/ryse-vision.png" alt="Ryse Vision" width="480" height="58"></span>
+        <span class="footer-logo-tile"><img src="logos/ryse-ventures.png" alt="Ryse Ventures" width="480" height="146"></span>
+        <span class="footer-logo-tile is-dark"><img class="logo-square" src="logos/twentyoneos.png" alt="TwentyOneOS" width="189" height="200"></span>
+        <span class="footer-logo-tile is-dark"><img class="logo-square" src="logos/ryse-peptides.png" alt="Ryse Peptides" width="230" height="200"></span>
+      </div>
+      <div class="footer-inner">
+        <span class="footer-brand">Ryse 21</span>
+        <p>&copy; 2026 Ryse 21</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var header = document.querySelector(".site-header");
+      var btn = document.querySelector(".nav-toggle");
+      var nav = document.getElementById("site-nav");
+      if (!header || !btn || !nav) return;
+      function setOpen(open) {
+        header.classList.toggle("is-nav-open", open);
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+      btn.addEventListener("click", function () {
+        setOpen(btn.getAttribute("aria-expanded") !== "true");
+      });
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () { setOpen(false); });
+      });
+    })();
+  </script>
+</body>
+</html>
