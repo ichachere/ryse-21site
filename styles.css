@@ -111,18 +111,13 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1.02rem;
-  letter-spacing: -0.03em;
   min-height: 44px;
   flex-shrink: 0;
 }
 
-.brand-mark {
-  width: 28px;
-  height: 28px;
+.brand-logo {
+  height: 32px;
+  width: auto;
   flex-shrink: 0;
 }
 
